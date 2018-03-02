@@ -8,10 +8,10 @@
   {:default (complement :intentionally-failing)
    :yes-i-know-the-tests-are-supposed-to-fail :intentionally-failing}
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.8.0"]
-                                  [org.clojure/clojurescript "1.7.228"]
+                                  [org.clojure/clojurescript "1.10.339"]
                                   [org.seleniumhq.selenium/selenium-java "2.52.0"]
                                   [com.codeborne/phantomjsdriver "1.2.1"]]
-                   :plugins [[lein-cljsbuild "1.1.2"]]
+                   :plugins [[lein-cljsbuild "1.1.7"]]
                    :cljsbuild {:test-commands {"test" ["phantomjs" "dev-resources/test/phantom/run.js" "dev-resources/test/test.html"]}
                                :builds [{:id "test"
                                          :source-paths ["src" "test"]
