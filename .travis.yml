@@ -4,6 +4,5 @@ before_script:
     - lein cljsbuild once
 
 script:
-    - lein test :yes-i-know-the-tests-are-supposed-to-fail | diff test/fixtures/test_output -
+    - lein test :yes-i-know-the-tests-are-supposed-to-fail 2> diff test/fixtures/test_output -
     - lein cljsbuild test 2>&1 | grep --invert-match '_JAVA_OPTIONS' | diff test/fixtures/test_output_cljs -
-
